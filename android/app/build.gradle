@@ -58,6 +58,22 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    flavorDimensions "default"
+    productFlavors {
+        red {
+            applicationIdSuffix ".red"
+            dimension "default"
+            resValue "string", "app_name", "RED APP"
+            versionNameSuffix ".red"
+        }
+
+        blue {
+            dimension "default"
+            applicationIdSuffix ".blue"
+            resValue "string", "app_name", "BLUE APP"
+            versionNameSuffix ".blue"
+        }
+    }
 }
 
 flutter {
